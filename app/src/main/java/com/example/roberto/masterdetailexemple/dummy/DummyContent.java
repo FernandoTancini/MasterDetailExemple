@@ -24,10 +24,7 @@ public class DummyContent {
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     static {
-        // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new DummyItem("1", "The Item 1", "Description here."));
     }
 
     private static void addItem(DummyItem item) {
@@ -41,10 +38,12 @@ public class DummyContent {
     public static class DummyItem {
         public String id;
         public String content;
+        public String mDescription;
 
-        public DummyItem(String id, String content) {
+        public DummyItem(String id, String content, String description) {
             this.id = id;
             this.content = content;
+            this.mDescription = description;
         }
 
         @Override
